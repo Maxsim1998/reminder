@@ -1,5 +1,9 @@
+import { ListsItemWrapper } from '../../components';
+
 export const Dashboard = () => {
   return (
-    <div>Dashboard</div>
+    <div>
+      <ListsItemWrapper />
+    </div>
   );
 };
