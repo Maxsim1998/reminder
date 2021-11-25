@@ -13,8 +13,11 @@ export const ListsItemWrapper = ({
   count,
   title,
   children,
+  styles,
+  centered,
+  onClick,
 }) => (
-  <Wrap color={color}>
+  <Wrap centered={centered} onClick={onClick} styles={styles} color={color}>
     {children ? (
       children
     ) : (
@@ -38,6 +41,9 @@ ListsItemWrapper.propTypes = {
   count: T.oneOfType([T.string, T.number]),
   title: T.string,
   children: T.node,
+  styles: T.object,
+  onClick: T.func,
+  centered: T.bool,
 };
 
 ListsItemWrapper.defaultProps = {
@@ -45,4 +51,5 @@ ListsItemWrapper.defaultProps = {
   count: 0,
   title: 'Some list',
   color: theme.commonListsItemColor,
+  centered: false,
 };

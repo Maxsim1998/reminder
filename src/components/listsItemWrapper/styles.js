@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 // theme
 import theme from '../../theme';
 
@@ -8,6 +8,18 @@ export const Wrap = styled.div`
   padding: 15px;
   height: 150px;
   width: 220px;
+  margin-right: 30px;
+  cursor: pointer;
+  &:last-child {
+    margin-right: 0;
+  }
+  ${(props) =>
+    props.centered &&
+    css`
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    `}
 `;
 
 export const Top = styled.div`
